@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather and Air Quality Here</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <h3>Weather and Air Quality Here</h3>
+    <div>
+        <a href="/">Checkin</a> | <a href="/logs">View Checkins</a>
+    </div>
+    <div id="status"></div>
+    <div id="maincontent">
+        <p>
+            Hiện tại tôi đang ở tọa độ: (Kinh độ: <span id='latitude'></span>&deg| Vĩ độ: <span id='longitude'>&deg</span>).
+            Thời tiết ở đây được dự báo là "<span id="weather_sumary"></span>", nhiệt độ ngoài trời khoảng <span id="temperature"></span>&deg C.
+            Chất lượng không khí mà tôi đang hít thở như sau: <br />
+            <span id="air_parameter"></span> 
+            <span id="location">
+                - Đo tại thành phố <span id="city"></span>, <span id="country"></span>. 
+                Cập nhật lần cuối vào ngày <span id="air_date"></span>
+            </span>
+        </p>
+
+        <label for="mood">Tâm trạng của tôi lúc này là: </label>
+        <input id="mood" value="feeling cool!" />
+        <button id="checkin">Check In</button>
+    </div>
+
+
+    <script src='checkin.js'></script>
+</body>
+</html>
